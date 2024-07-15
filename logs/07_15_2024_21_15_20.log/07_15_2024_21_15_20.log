@@ -1,0 +1,32 @@
+[2024-07-15 21:15:20,780] 97 werkzeug - WARNING -  * Debugger is active!
+[2024-07-15 21:15:20,780] 97 werkzeug - INFO -  * Debugger PIN: 854-225-229
+[2024-07-15 21:15:30,780] 97 werkzeug - INFO - 127.0.0.1 - - [15/Jul/2024 21:15:30] "GET / HTTP/1.1" 200 -
+[2024-07-15 21:16:19,285] 43 root - ERROR - An error occurred during prediction.
+Traceback (most recent call last):
+  File "E:\Project Loan Prediction\Loan-Approval-Prediction\src\pipeline\prediction_pipeline.py", line 66, in get_data_frame
+    data=pd.DataFrame(custom_input)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Project Loan Prediction\Loan-Approval-Prediction\env\Lib\site-packages\pandas\core\frame.py", line 778, in __init__
+    mgr = dict_to_mgr(data, index, columns, dtype=dtype, copy=copy, typ=manager)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Project Loan Prediction\Loan-Approval-Prediction\env\Lib\site-packages\pandas\core\internals\construction.py", line 503, in dict_to_mgr
+    return arrays_to_mgr(arrays, columns, index, dtype=dtype, typ=typ, consolidate=copy)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Project Loan Prediction\Loan-Approval-Prediction\env\Lib\site-packages\pandas\core\internals\construction.py", line 114, in arrays_to_mgr
+    index = _extract_index(arrays)
+            ^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Project Loan Prediction\Loan-Approval-Prediction\env\Lib\site-packages\pandas\core\internals\construction.py", line 667, in _extract_index
+    raise ValueError("If using all scalar values, you must pass an index")
+ValueError: If using all scalar values, you must pass an index
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Project Loan Prediction\Loan-Approval-Prediction\app.py", line 29, in prediction_data
+    final_data = data.get_data_frame()
+                 ^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Project Loan Prediction\Loan-Approval-Prediction\src\pipeline\prediction_pipeline.py", line 70, in get_data_frame
+    raise CustomException
+TypeError: CustomException.__init__() missing 2 required positional arguments: 'error_message' and 'error_detailed'
+[2024-07-15 21:16:19,292] 97 werkzeug - INFO - 127.0.0.1 - - [15/Jul/2024 21:16:19] "POST / HTTP/1.1" 200 -
+[2024-07-15 21:22:55,673] 97 werkzeug - INFO -  * Detected change in 'E:\\Project Loan Prediction\\Loan-Approval-Prediction\\src\\utils.py', reloading

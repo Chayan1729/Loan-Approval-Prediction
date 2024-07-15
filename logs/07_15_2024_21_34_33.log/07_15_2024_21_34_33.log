@@ -1,0 +1,17 @@
+[2024-07-15 21:34:34,343] 97 werkzeug - WARNING -  * Debugger is active!
+[2024-07-15 21:34:34,343] 97 werkzeug - INFO -  * Debugger PIN: 854-225-229
+[2024-07-15 21:34:41,875] 97 werkzeug - INFO - 127.0.0.1 - - [15/Jul/2024 21:34:41] "GET / HTTP/1.1" 200 -
+[2024-07-15 21:35:24,039] 18 root - INFO - Form data received
+[2024-07-15 21:35:24,041] 33 root - INFO - Custom class instance created successfully
+[2024-07-15 21:35:24,051] 64 root - INFO - Data frame created:   Gender Married Dependents Education Self_Employed  ApplicantIncome  CoapplicantIncome  LoanAmount  Loan_Amount_Term  Credit_History Property_Area
+0   male     yes          1  Graduate           Yes            10000             1400.0      1501.0              24.0             1.0         Urban
+[2024-07-15 21:35:24,057] 36 root - INFO - Data frame created:   Gender Married Dependents Education Self_Employed  ApplicantIncome  CoapplicantIncome  LoanAmount  Loan_Amount_Term  Credit_History Property_Area
+0   male     yes          1  Graduate           Yes            10000             1400.0      1501.0              24.0             1.0         Urban
+[2024-07-15 21:35:24,058] 16 root - INFO - Prediction started
+[2024-07-15 21:35:24,058] 19 root - INFO - Loading model from path: notebook\LogisticRegression_Smote.pkl
+[2024-07-15 21:35:24,058] 11 root - INFO - Loading pickle file from path: notebook\LogisticRegression_Smote.pkl
+[2024-07-15 21:35:24,195] 14 root - INFO - Pickle file loaded successfully
+[2024-07-15 21:35:24,196] 22 root - INFO - Model loaded successfully
+[2024-07-15 21:35:24,428] 24 root - INFO - Prediction completed: [1]
+[2024-07-15 21:35:24,428] 40 root - INFO - Prediction result: [1]
+[2024-07-15 21:35:24,429] 97 werkzeug - INFO - 127.0.0.1 - - [15/Jul/2024 21:35:24] "POST / HTTP/1.1" 200 -

@@ -1,0 +1,59 @@
+[2024-07-16 00:27:56,473] 97 werkzeug - WARNING -  * Debugger is active!
+[2024-07-16 00:27:56,478] 97 werkzeug - INFO -  * Debugger PIN: 854-225-229
+[2024-07-16 00:28:00,931] 97 werkzeug - INFO - 127.0.0.1 - - [16/Jul/2024 00:28:00] "GET / HTTP/1.1" 200 -
+[2024-07-16 00:28:36,398] 18 root - INFO - Form data received
+[2024-07-16 00:28:36,405] 33 root - INFO - Custom class instance created successfully
+[2024-07-16 00:28:36,412] 65 root - INFO - Data frame created:    Gender Married Dependents     Education Self_Employed  ApplicantIncome  CoapplicantIncome  LoanAmount  Loan_Amount_Term  Credit_History Property_Area
+0  Female      No          1  Not Graduate           Yes              154               15.0        12.0              12.0             0.0         Urban
+[2024-07-16 00:28:36,422] 36 root - INFO - Data frame created:    Gender Married Dependents     Education Self_Employed  ApplicantIncome  CoapplicantIncome  LoanAmount  Loan_Amount_Term  Credit_History Property_Area
+0  Female      No          1  Not Graduate           Yes              154               15.0        12.0              12.0             0.0         Urban
+[2024-07-16 00:28:36,422] 17 root - INFO - Prediction started
+[2024-07-16 00:28:36,422] 20 root - INFO - Loading model from path: notebook/pickle_file\LogisticRegression_Smote.pkl
+[2024-07-16 00:28:36,422] 11 root - INFO - Loading pickle file from path: notebook/pickle_file\LogisticRegression_Smote.pkl
+[2024-07-16 00:28:36,436] 14 root - INFO - Pickle file loaded successfully
+[2024-07-16 00:28:36,436] 23 root - INFO - Model loaded successfully
+[2024-07-16 00:28:36,449] 25 root - INFO - Prediction completed: [0]
+[2024-07-16 00:28:36,449] 40 root - INFO - Prediction result: [0]
+[2024-07-16 00:28:36,449] 97 werkzeug - INFO - 127.0.0.1 - - [16/Jul/2024 00:28:36] "POST / HTTP/1.1" 200 -
+[2024-07-16 00:28:45,521] 18 root - INFO - Form data received
+[2024-07-16 00:28:45,521] 33 root - INFO - Custom class instance created successfully
+[2024-07-16 00:28:45,530] 65 root - INFO - Data frame created:    Gender Married Dependents     Education Self_Employed  ApplicantIncome  CoapplicantIncome  LoanAmount  Loan_Amount_Term  Credit_History Property_Area
+0  Female      No          1  Not Graduate           Yes              154               15.0        12.0              12.0             0.0         Urban
+[2024-07-16 00:28:45,538] 36 root - INFO - Data frame created:    Gender Married Dependents     Education Self_Employed  ApplicantIncome  CoapplicantIncome  LoanAmount  Loan_Amount_Term  Credit_History Property_Area
+0  Female      No          1  Not Graduate           Yes              154               15.0        12.0              12.0             0.0         Urban
+[2024-07-16 00:28:45,538] 17 root - INFO - Prediction started
+[2024-07-16 00:28:45,538] 20 root - INFO - Loading model from path: notebook/pickle_file\LogisticRegression_Smote.pkl
+[2024-07-16 00:28:45,538] 11 root - INFO - Loading pickle file from path: notebook/pickle_file\LogisticRegression_Smote.pkl
+[2024-07-16 00:28:45,546] 14 root - INFO - Pickle file loaded successfully
+[2024-07-16 00:28:45,546] 23 root - INFO - Model loaded successfully
+[2024-07-16 00:28:45,553] 25 root - INFO - Prediction completed: [0]
+[2024-07-16 00:28:45,560] 40 root - INFO - Prediction result: [0]
+[2024-07-16 00:28:45,561] 97 werkzeug - INFO - 127.0.0.1 - - [16/Jul/2024 00:28:45] "POST / HTTP/1.1" 200 -
+[2024-07-16 00:28:52,845] 18 root - INFO - Form data received
+[2024-07-16 00:28:52,845] 33 root - INFO - Custom class instance created successfully
+[2024-07-16 00:28:52,857] 65 root - INFO - Data frame created:    Gender Married Dependents     Education Self_Employed  ApplicantIncome  CoapplicantIncome  LoanAmount  Loan_Amount_Term  Credit_History Property_Area
+0  Female      No          1  Not Graduate           Yes              154               15.0        12.0              12.0             0.0         Urban
+[2024-07-16 00:28:52,860] 36 root - INFO - Data frame created:    Gender Married Dependents     Education Self_Employed  ApplicantIncome  CoapplicantIncome  LoanAmount  Loan_Amount_Term  Credit_History Property_Area
+0  Female      No          1  Not Graduate           Yes              154               15.0        12.0              12.0             0.0         Urban
+[2024-07-16 00:28:52,860] 17 root - INFO - Prediction started
+[2024-07-16 00:28:52,860] 20 root - INFO - Loading model from path: notebook/pickle_file\LogisticRegression_Smote.pkl
+[2024-07-16 00:28:52,860] 11 root - INFO - Loading pickle file from path: notebook/pickle_file\LogisticRegression_Smote.pkl
+[2024-07-16 00:28:52,868] 14 root - INFO - Pickle file loaded successfully
+[2024-07-16 00:28:52,868] 23 root - INFO - Model loaded successfully
+[2024-07-16 00:28:52,880] 25 root - INFO - Prediction completed: [0]
+[2024-07-16 00:28:52,880] 40 root - INFO - Prediction result: [0]
+[2024-07-16 00:28:52,882] 97 werkzeug - INFO - 127.0.0.1 - - [16/Jul/2024 00:28:52] "POST / HTTP/1.1" 200 -
+[2024-07-16 00:28:56,043] 18 root - INFO - Form data received
+[2024-07-16 00:28:56,043] 33 root - INFO - Custom class instance created successfully
+[2024-07-16 00:28:56,054] 65 root - INFO - Data frame created:    Gender Married Dependents     Education Self_Employed  ApplicantIncome  CoapplicantIncome  LoanAmount  Loan_Amount_Term  Credit_History Property_Area
+0  Female      No          1  Not Graduate           Yes              154               15.0        12.0              12.0             0.0         Urban
+[2024-07-16 00:28:56,060] 36 root - INFO - Data frame created:    Gender Married Dependents     Education Self_Employed  ApplicantIncome  CoapplicantIncome  LoanAmount  Loan_Amount_Term  Credit_History Property_Area
+0  Female      No          1  Not Graduate           Yes              154               15.0        12.0              12.0             0.0         Urban
+[2024-07-16 00:28:56,060] 17 root - INFO - Prediction started
+[2024-07-16 00:28:56,060] 20 root - INFO - Loading model from path: notebook/pickle_file\LogisticRegression_Smote.pkl
+[2024-07-16 00:28:56,060] 11 root - INFO - Loading pickle file from path: notebook/pickle_file\LogisticRegression_Smote.pkl
+[2024-07-16 00:28:56,070] 14 root - INFO - Pickle file loaded successfully
+[2024-07-16 00:28:56,070] 23 root - INFO - Model loaded successfully
+[2024-07-16 00:28:56,078] 25 root - INFO - Prediction completed: [0]
+[2024-07-16 00:28:56,078] 40 root - INFO - Prediction result: [0]
+[2024-07-16 00:28:56,078] 97 werkzeug - INFO - 127.0.0.1 - - [16/Jul/2024 00:28:56] "POST / HTTP/1.1" 200 -

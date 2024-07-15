@@ -1,0 +1,8 @@
+ [2024-07-12 19:17:01,267] 97 werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+[2024-07-12 19:17:01,267] 97 werkzeug - INFO - [33mPress CTRL+C to quit[0m
+[2024-07-12 19:17:01,272] 97 werkzeug - INFO -  * Restarting with stat
+[2024-07-12 19:17:01,617] 97 werkzeug - WARNING -  * Debugger is active!
+[2024-07-12 19:17:01,622] 97 werkzeug - INFO -  * Debugger PIN: 101-570-430
+[2024-07-12 19:17:11,505] 16 root - INFO - Error occured in python script name[E:\Project Loan Prediction\Loan-Approval-Prediction\app.py] line number [13] error message[exceptions must derive from BaseException]
+[2024-07-12 19:17:11,506] 97 werkzeug - INFO - 127.0.0.1 - - [12/Jul/2024 19:17:11] "GET / HTTP/1.1" 200 -

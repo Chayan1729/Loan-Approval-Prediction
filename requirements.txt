@@ -1,0 +1,7 @@
+pandas
+Flask
+seaborn
+numpy
+-e .
+imbalanced-learn
+scikit-learn==1.5.1

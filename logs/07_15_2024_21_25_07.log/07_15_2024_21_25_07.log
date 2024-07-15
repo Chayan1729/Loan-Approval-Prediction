@@ -1,0 +1,62 @@
+[2024-07-15 21:25:07,502] 97 werkzeug - WARNING -  * Debugger is active!
+[2024-07-15 21:25:07,518] 97 werkzeug - INFO -  * Debugger PIN: 854-225-229
+[2024-07-15 21:25:14,075] 97 werkzeug - INFO - 127.0.0.1 - - [15/Jul/2024 21:25:14] "GET / HTTP/1.1" 200 -
+[2024-07-15 21:25:58,332] 15 root - INFO - Form data received
+[2024-07-15 21:25:58,337] 30 root - INFO - Custom class instance created successfully
+[2024-07-15 21:25:58,664] 62 root - INFO - Data frame created:   Gender Married Dependents Education Self_Employed  ApplicantIncome  CoapplicantIncome  LoanAmount  Loan_Amount_Term  Credit_History Property_Area
+0   male      no          0  Graduate           Yes            10000             1900.0      1200.0              24.0             1.0         Urban
+[2024-07-15 21:25:58,686] 33 root - INFO - Data frame created:   Gender Married Dependents Education Self_Employed  ApplicantIncome  CoapplicantIncome  LoanAmount  Loan_Amount_Term  Credit_History Property_Area
+0   male      no          0  Graduate           Yes            10000             1900.0      1200.0              24.0             1.0         Urban
+[2024-07-15 21:25:58,687] 14 root - INFO - Prediction started
+[2024-07-15 21:25:58,687] 17 root - INFO - Loading model from path: notebook\LogisticRegression_Smote.pkl
+[2024-07-15 21:25:58,687] 9 root - INFO - Loading pickle file from path: notebook\LogisticRegression_Smote.pkl
+[2024-07-15 21:25:58,687] 15 root - ERROR - Error loading pickle file
+Traceback (most recent call last):
+  File "E:\Project Loan Prediction\Loan-Approval-Prediction\src\utils.py", line 11, in load_object
+    obj = pickle.load(file_obj)
+          ^^^^^^^^^^^^^^^^^^^^^
+ModuleNotFoundError: No module named 'imblearn'
+[2024-07-15 21:25:58,689] 27 root - ERROR - Error in predictionPipeline
+Traceback (most recent call last):
+  File "E:\Project Loan Prediction\Loan-Approval-Prediction\src\utils.py", line 11, in load_object
+    obj = pickle.load(file_obj)
+          ^^^^^^^^^^^^^^^^^^^^^
+ModuleNotFoundError: No module named 'imblearn'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Project Loan Prediction\Loan-Approval-Prediction\src\pipeline\prediction_pipeline.py", line 18, in predict
+    model = load_object(model_path)
+            ^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Project Loan Prediction\Loan-Approval-Prediction\src\utils.py", line 16, in load_object
+    raise CustomException(e, sys)
+src.exception.CustomException: Error occured in python script name[E:\Project Loan Prediction\Loan-Approval-Prediction\src\utils.py] line number [11] error message[No module named 'imblearn']
+[2024-07-15 21:25:58,689] 49 root - ERROR - An error occurred during prediction.
+Traceback (most recent call last):
+  File "E:\Project Loan Prediction\Loan-Approval-Prediction\src\utils.py", line 11, in load_object
+    obj = pickle.load(file_obj)
+          ^^^^^^^^^^^^^^^^^^^^^
+ModuleNotFoundError: No module named 'imblearn'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Project Loan Prediction\Loan-Approval-Prediction\src\pipeline\prediction_pipeline.py", line 18, in predict
+    model = load_object(model_path)
+            ^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Project Loan Prediction\Loan-Approval-Prediction\src\utils.py", line 16, in load_object
+    raise CustomException(e, sys)
+src.exception.CustomException: Error occured in python script name[E:\Project Loan Prediction\Loan-Approval-Prediction\src\utils.py] line number [11] error message[No module named 'imblearn']
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Project Loan Prediction\Loan-Approval-Prediction\app.py", line 36, in prediction_data
+    pred = prediction_func.predict(final_data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Project Loan Prediction\Loan-Approval-Prediction\src\pipeline\prediction_pipeline.py", line 28, in predict
+    raise CustomException(e, sys)
+src.exception.CustomException: Error occured in python script name[E:\Project Loan Prediction\Loan-Approval-Prediction\src\pipeline\prediction_pipeline.py] line number [18] error message[Error occured in python script name[E:\Project Loan Prediction\Loan-Approval-Prediction\src\utils.py] line number [11] error message[No module named 'imblearn']]
+[2024-07-15 21:25:58,690] 97 werkzeug - INFO - 127.0.0.1 - - [15/Jul/2024 21:25:58] "POST / HTTP/1.1" 200 -
+[2024-07-15 21:29:07,514] 97 werkzeug - INFO -  * Detected change in 'E:\\Project Loan Prediction\\Loan-Approval-Prediction\\src\\utils.py', reloading
