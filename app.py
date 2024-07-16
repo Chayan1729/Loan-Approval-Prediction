@@ -39,7 +39,7 @@ def prediction_data():
             pred = prediction_func.predict(final_data)
             logging.info(f"Prediction result: {pred}")
 
-            result = pred[0]  # Assuming pred returns a list-like structure
+            result = pred[0]
 
             if result == 0:
                 final_result = '''Sorry,Your Loan is Not APPROVED, 
