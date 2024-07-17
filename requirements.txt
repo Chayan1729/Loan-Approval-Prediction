@@ -1,7 +1,7 @@
-pandas
+pandas==2.0.3
 Flask
 seaborn
-numpy
+numpy==1.24.3
 -e .
 imbalanced-learn
-scikit-learn==1.5.1
+scikit-learn==1.3.0
