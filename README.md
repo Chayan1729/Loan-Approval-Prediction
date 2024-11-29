@@ -120,4 +120,11 @@ A **Flask Web Application** was developed to integrate the model into an accessi
 - On submitting the input, the Flask app utilizes the prediction pipeline to process the data and displays the predicted loan approval result.
 - This Flask app makes the loan approval prediction process available to end-users in a real-world scenario.
 
+### Usage:
+```bash
+conda activate env/
+pip install -r requirements.txt
+python app.py
+Access http://localhost:5000/
+```
 
