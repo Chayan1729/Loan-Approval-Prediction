@@ -26,8 +26,10 @@ There are 13 independent variables:
 
 - **Loan_Status**: This is the outcome variable indicating whether the loan application was approved or not.
 
+# Animation of UI
+- Below is an animation demonstrating the user interface for the Loan Approval Prediction application:
 
-
+![Animated UI](templates/ui-animation.gif)
 # Project Development Approach
 
 ## Data Ingestion
