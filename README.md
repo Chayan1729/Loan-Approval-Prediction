@@ -122,6 +122,7 @@ A **Flask Web Application** was developed to integrate the model into an accessi
 
 ### Usage:
 ```bash
+conda create --name env python=3.11
 conda activate env/
 pip install -r requirements.txt
 python app.py
