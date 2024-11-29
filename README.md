@@ -25,3 +25,59 @@ There are 13 independent variables:
 ### Target Variable:
 
 - **Loan_Status**: This is the outcome variable indicating whether the loan application was approved or not.
+
+
+
+# Project Development Approach
+
+## Data Ingestion
+
+In the Data Ingestion phase:
+- The data is first read as a CSV file.
+- The dataset is split into training and testing sets. Initial checks are performed to identify and handle null values and duplicate rows.
+- Rigorous exploratory data analysis (EDA) is conducted to gain insights into the data.
+
+### Feature Construction:
+- Customers are clustered based on their **income**, **coapplicant income**, **credit history**, **dependents**, and **residential area**.
+- A new column is created to estimate the **risk probability** of lending. This is calculated by subtracting the probability of approval in a cluster (ratio of approved loans in the cluster to total loans in the cluster) from 1.
+
+---
+
+## Data Transformation
+
+In the **Data Transformation** phase, the raw dataset is prepared for machine learning by applying several preprocessing steps:
+
+### 1. Handling Numeric Data
+- The numerical columns `ApplicantIncome`, `CoapplicantIncome`, `LoanAmount`, and `Loan_Amount_Term` are preprocessed using the following steps:
+  - Missing values are filled with the **mean** of the respective columns.
+  - The values are scaled using **Min-Max Scaling**, which transforms the data to a range between 0 and 1 to normalize it for the model.
+
+### 2. Imputing Credit History
+- For the `Credit_History` column, which has some missing values:
+  - A **K-Nearest Neighbors (KNN) Imputer** is applied to estimate missing values. This method uses the similarity of neighboring data points to fill in the gaps.
+  - The values are then scaled using **Min-Max Scaling** to standardize them.
+
+### 3. Handling Categorical Data with Ordinal Encoding
+- For categorical columns like `Dependents`, `Property_Area`, and `Education`, which have a natural order:
+  - Missing values are filled with the **most frequent category**.
+  - The categories are encoded with **Ordinal Encoding**, which assigns a rank-based numeric value to each category. For example:
+    - `Dependents`: "0", "1", "2", "3+" are encoded as 0, 1, 2, 3.
+    - `Property_Area`: "Rural", "Semiurban", "Urban" are encoded in a specified order.
+    - `Education`: "Not Graduate" and "Graduate" are encoded as 0 and 1, respectively.
+
+### 4. Handling Categorical Data with One-Hot Encoding
+- For columns like `Gender`, `Married`, and `Self_Employed` that do not have a natural order:
+  - Missing values are filled with the **most frequent category**.
+  - These columns are then transformed using **One-Hot Encoding**, creating binary columns for each category. For instance:
+    - If `Gender` has values "Male" and "Female," it creates one column (e.g., `Gender_Male`) with binary values (1 for Male, 0 for Female).
+
+### 5. Combining All Preprocessing Steps
+- A **ColumnTransformer** is created to apply these transformations to the respective columns in one step:
+  - The numerical columns are scaled after imputing missing values.
+  - The `Credit_History` column is processed using KNN Imputation and scaling.
+  - Ordinal encoding is applied to ordered categorical data.
+  - One-Hot Encoding is applied to unordered categorical data.
+
+### 6. Saving the Preprocessor
+- The entire preprocessing pipeline is saved as a **pickle file** for future use. This ensures that the same transformations can be applied consistently to new data during prediction.
+
