@@ -79,5 +79,45 @@ In the **Data Transformation** phase, the raw dataset is prepared for machine le
   - One-Hot Encoding is applied to unordered categorical data.
 
 ### 6. Saving the Preprocessor
-- The entire preprocessing pipeline is saved as a **pickle file** for future use. This ensures that the same transformations can be applied consistently to new data during prediction.
+- The entire preprocessing pipeline is saved as a **pickle file** for future use. This ensures that the same transformations can be applied consistently to new data during prediction.## Model Training
+
+In this phase, multiple machine learning models were trained and evaluated to identify the best-performing one for predicting loan approval. The process involved the following steps:
+
+### 1. Model Selection and Evaluation
+- Various machine learning models were tested and evaluated based on their performance metrics.
+- Gradient Boosting emerged as the best-performing model in terms of accuracy and reliability.
+
+### 2. Hyperparameter Tuning
+- To further optimize the Gradient Boosting model, hyperparameter tuning was conducted.
+- The best hyperparameters identified were:
+  ```json
+  {
+    "learning_rate": 0.2,
+    "max_depth": 4,
+    "n_estimators": 100
+  }
+  ```
+###3. Model Saving
+- The trained Gradient Boosting model was serialized and saved as a pickle file for use in the prediction pipeline.
+#### Prediction Pipeline
+  The Prediction Pipeline is designed to handle new input data, preprocess it, and generate predictions. The steps include:
+
+#### 1. Data Handling
+- The pipeline converts incoming data into a structured DataFrame format.
+#### 2. Loading Pre-trained Components
+- It loads the saved preprocessing pipeline and Gradient Boosting model from pickle files.
+#### 3. Generating Predictions
+- The input data is preprocessed using the loaded pipeline.
+- The preprocessed data is then fed into the Gradient Boosting model to produce predictions for loan approval.
+- This pipeline ensures consistent and efficient predictions for real-time data.
+
+### Flask App Creation
+A **Flask Web Application** was developed to integrate the model into an accessible user interface. The features include:
+
+#### 1. User Interface
+- A simple and intuitive web interface where users can input the required features for loan prediction.
+#### 2. Loan Approval Prediction
+- On submitting the input, the Flask app utilizes the prediction pipeline to process the data and displays the predicted loan approval result.
+- This Flask app makes the loan approval prediction process available to end-users in a real-world scenario.
+
 
