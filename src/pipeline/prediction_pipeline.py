@@ -1,27 +1,36 @@
 import os, sys
 from src.logger import logging
 from src.exception import CustomException
+# from src.preprocessor import final_preprocessor
 from src.utils import load_object
 from dataclasses import dataclass
 import pandas as pd
 from imblearn.over_sampling import SMOTE
 from imblearn.pipeline import Pipeline as ImbPipeline
-
+# notebook/pickle_file/GradientBoosting_best_model.pkl
 # notebook\pickle_file\LogisticRegression_Smote.pkl
+# file_path="E:/Project Loan Prediction/Loan-Approval-Prediction/notebook/pickle_file/GradientBoosting_best_model.pkl"
+
 class predictionPipeline:
     def __init__(self):
         pass
-
+    
     def predict(self, features):
         try:
             logging.info("Prediction started")
-            model_path = os.path.join("notebook/pickle_file", "LogisticRegression_Smote.pkl")
-
+            model_path = os.path.join("notebook/pickle_file", "GradientBoosting_best_model.pkl")
+            prepro_path=os.path.join("notebook/pickle_file","final_preprocessor.pkl")
             logging.info(f"Loading model from path: {model_path}")
             model = load_object(model_path)
-
+            final_preprocessor=load_object(prepro_path)
             logging.info("Model loaded successfully")
-            pred = model.predict(features)
+
+            # Preprocess the features before passing to the model
+            logging.info("Preprocessing the input features")
+            features_processed = final_preprocessor.transform(features)
+            logging.info("Preprocessing completed")
+
+            pred = model.predict(features_processed)
             logging.info(f"Prediction completed: {pred}")
 
             return pred
