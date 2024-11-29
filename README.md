@@ -97,7 +97,7 @@ In this phase, multiple machine learning models were trained and evaluated to id
     "n_estimators": 100
   }
   ```
-###3. Model Saving
+### 3. Model Saving
 - The trained Gradient Boosting model was serialized and saved as a pickle file for use in the prediction pipeline.
 #### Prediction Pipeline
   The Prediction Pipeline is designed to handle new input data, preprocess it, and generate predictions. The steps include:
